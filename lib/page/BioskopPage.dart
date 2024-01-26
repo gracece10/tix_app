@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tix_app/page/AccountPage.dart';
 import 'package:tix_app/page/NotificationPage.dart';
+import 'package:tix_app/page/OrderTiketPage.dart';
 
 class BioskopPage extends StatefulWidget {
   const BioskopPage({super.key});
@@ -37,7 +38,7 @@ class _BioskopPageState extends State<BioskopPage> {
                   MaterialPageRoute(builder: (context) => AccountPage()));
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 80),
               child: Icon(
                 Icons.account_circle_outlined,
                 size: 30,
@@ -71,20 +72,17 @@ class _BioskopPageState extends State<BioskopPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Icon(
-                          Icons.location_on,
-                          color: Colors.grey,
-                          size: 20,
-                        ),
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.grey,
+                        size: 20,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 5),
                         child: Text("BANJARMASIN"),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 190),
+                        padding: const EdgeInsets.only(left: 200),
                         child: Icon(
                           Icons.keyboard_arrow_down,
                           color: Colors.grey,
@@ -95,15 +93,18 @@ class _BioskopPageState extends State<BioskopPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10, left: 30),
+                padding: const EdgeInsets.only(left: 20),
                 child: Container(
                   child: Row(
                     children: [
-                      Image.asset(
-                        "assets/Cinema.png",
-                        width: 70,
-                        height: 80,
-                        fit: BoxFit.cover,
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: Image.asset(
+                          "assets/Cinema.png",
+                          width: 60,
+                          height: 65,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 20, left: 10),
@@ -111,23 +112,23 @@ class _BioskopPageState extends State<BioskopPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Tandai bioskop favoritemu!",
+                              "Tandai bioskop favoritmu!",
                               style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.bold),
+                                  fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 10),
+                              padding: const EdgeInsets.only(top: 5),
                               child: Text(
-                                "Bioskop favoritemu akan berada paling atas",
-                                style: TextStyle(fontSize: 12.5),
+                                "Bioskop favoritmu akan berada paling atas",
+                                style: TextStyle(fontSize: 13.5),
                               ),
                             ),
                             Text(
-                              "pada daftar ini dan pada jadwal film",
-                              style: TextStyle(fontSize: 12.5),
+                              "pada daftar ini dan pada jadwal film.",
+                              style: TextStyle(fontSize: 13.5),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 15),
+                              padding: const EdgeInsets.only(top: 12),
                               child: Container(
                                 height: 25,
                                 width: 70,
@@ -151,12 +152,80 @@ class _BioskopPageState extends State<BioskopPage> {
                   ),
                 ),
               ),
-              Divider(
-                height: 55,
-                thickness: 1,
-              )
             ],
-          )
+          ),
+          Divider(
+            height: 35,
+            thickness: 1,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.stars,
+                  size: 24,
+                  color: Colors.grey.shade400,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OrderTiketPage()));
+                  },
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text("STUDIO BANJARMASIN PREMIERE"),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 80),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 10,
+                          color: Colors.grey.shade900,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            height: 35,
+            thickness: 1,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.stars,
+                  size: 24,
+                  color: Colors.grey.shade400,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text("STUDIO XXI BANJARMASIN"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 120),
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 10,
+                    color: Colors.grey.shade900,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            height: 35,
+            thickness: 1,
+          ),
         ],
       ),
     );

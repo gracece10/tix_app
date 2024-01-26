@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tix_app/page/AccountPage.dart';
+import 'package:tix_app/page/DaftarTransaksiPage.dart';
 import 'package:tix_app/page/NotificationPage.dart';
 import 'package:tix_app/page/TiketAktifPage.dart';
 
@@ -60,7 +61,7 @@ class _TiketPageState extends State<TiketPage>
                   MaterialPageRoute(builder: (context) => AccountPage()));
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 80),
               child: Icon(
                 Icons.account_circle_outlined,
                 size: 30,
@@ -100,9 +101,7 @@ class _TiketPageState extends State<TiketPage>
                         // Content for TIKET AKTIF
                         TiketAktifPage(),
                         // Content for DAFTAR TRANSAKSI
-                        Center(
-                          child: Text("Content for DAFTAR TRANSAKSI"),
-                        ),
+                        DaftarTransasksiPage(),
                       ],
                     ),
                   ),

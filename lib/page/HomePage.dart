@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => AccountPage()));
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 50),
+                padding: const EdgeInsets.only(left: 80),
                 child: Icon(
                   Icons.account_circle_outlined,
                   size: 30,
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 150),
+                    padding: const EdgeInsets.only(left: 180),
                     child: Row(
                       children: [
                         Text(
