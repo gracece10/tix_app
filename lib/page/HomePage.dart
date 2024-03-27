@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:tix_app/page/AccountPage.dart';
+import 'package:tix_app/page/LoginPage.dart';
 import 'package:tix_app/page/NotificationPage.dart';
 import 'package:tix_app/widget/FilmWidget.dart';
-// import 'package:tix_app/widget/ItemWidget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -65,10 +65,10 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AccountPage()));
+                    MaterialPageRoute(builder: (context) => LoginPage()));
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 80),
+                padding: const EdgeInsets.only(left: 50),
                 child: Icon(
                   Icons.account_circle_outlined,
                   size: 30,
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                         builder: (context) => NotificationPage()));
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.only(left: 5, right: 10),
                 child: Icon(
                   Icons.notifications_none,
                   size: 30,
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 180),
+                    padding: const EdgeInsets.only(left: 150),
                     child: Row(
                       children: [
                         Text(
